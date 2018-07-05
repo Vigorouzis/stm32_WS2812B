@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=WS2812B.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\WS2812B -TC:\CooCox\CoIDE\configuration\ProgramData\WS2812B/arm-gcc-link.ld -g">
+      <target file="WS2812B.elf" lastModified="1646aa37c6f">
+         <source file="..\obj\stm32f10x_tim.o" lastModified="16460d23818"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="16460d23851"/>
+         <source file="..\obj\startup_stm32f10x_md.o" lastModified="16460b6d827"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="16460d23895"/>
+         <source file="..\obj\ws2812b.o" lastModified="1646aa32b68"/>
+         <source file="..\obj\main.o" lastModified="1646aa37aab"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="16460d23968"/>
+         <source file="..\obj\stm32f10x_exti.o" lastModified="16460d239a3"/>
+         <source file="..\obj\syscalls.o" lastModified="16460b6d98e"/>
+         <source file="..\obj\stm32f10x_dma.o" lastModified="16460d239e1"/>
+         <source file="..\obj\bitmap.o" lastModified="16460cee7de"/>
+         <source file="..\obj\misc.o" lastModified="16460d23a18"/>
+      </target>
+   </processor>
+</history>
