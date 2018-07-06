@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\..\..\Users\MKalinovskii\WS2812B\cmsis_boot /I..\..\..\..\..\Users\MKalinovskii /I..\..\..\..\..\Users\MKalinovskii\WS2812B\stm_lib\inc /I..\..\..\..\..\Users\MKalinovskii\WS2812B /I..\..\..\..\..\Users\MKalinovskii\WS2812B\cmsis /I..\..\..\..\..\Users\MKalinovskii\WS2812B\stm_lib">
+   <includePath signature="/I..\..\..\..\..\Users\PC\Desktop /I..\..\..\..\..\Users\PC\Desktop\WS2812B /I..\..\..\..\..\Users\PC\Desktop\WS2812B\cmsis /I..\..\..\..\..\Users\PC\Desktop\WS2812B\stm_lib\inc /I..\..\..\..\..\Users\PC\Desktop\WS2812B\cmsis_boot /I..\..\..\..\..\Users\PC\Desktop\WS2812B\stm_lib">
       <source file="..\..\..\stm_lib\src\bitmap.c" lastModified="150115f9ff8">
          <include file="..\..\..\stm_lib\inc\bitmap.h"/>
       </source>
@@ -8,14 +8,6 @@
          <include file="..\..\..\cmsis\core_cm3.h"/>
          <include file="..\..\..\cmsis_boot\system_stm32f10x.h"/>
          <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\ws2812b_conf.h" lastModified="150115f9c10">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
-         <include file="..\..\..\stm_lib\inc\misc.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="164608b4287">
       </source>
@@ -50,12 +42,8 @@
       </source>
       <source file="..\..\..\stm_lib\inc\ws2812b.h" lastModified="1646a44bef9">
       </source>
-      <source file="..\..\..\stm_lib\src\ws2812b.c" lastModified="1646aa1a1ca">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+      <source file="..\..\..\stm_lib\src\ws2812b.c" lastModified="1647047b692">
+         <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="164608b400d">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -91,6 +79,72 @@
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="164608b3ab7">
       </source>
       <source file="..\..\..\stm_lib\inc\bitmap.h" lastModified="16460cb7c76">
+      </source>
+   </includePath>
+   <includePath signature="/I..\..\..\..\..\Users\MKalinovskii\WS2812B\cmsis_boot /I..\..\..\..\..\Users\MKalinovskii /I..\..\..\..\..\Users\MKalinovskii\WS2812B\stm_lib\inc /I..\..\..\..\..\Users\MKalinovskii\WS2812B /I..\..\..\..\..\Users\MKalinovskii\WS2812B\cmsis /I..\..\..\..\..\Users\MKalinovskii\WS2812B\stm_lib">
+      <source file="..\..\..\stm_lib\inc\ws2812b_conf.h" lastModified="150115f9c10">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="164608b59e1">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="16460d2317a">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_exti.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="164608b5376">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="164608b59e2">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="164608b5376">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_exti.c" lastModified="164608b4d6c">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_exti.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="164608b400d">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\ws2812b.h" lastModified="1646a44bef9">
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="164608b400d">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="164608b3ab7">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_exti.h" lastModified="164608b4d6c">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\misc.c" lastModified="164608b6872">
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="164608b3ab7">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="164608b3ab7">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="164608b3ab7">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\misc.h" lastModified="164608b6872">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="164608b3ab7">
       </source>
    </includePath>
 </dependencies>

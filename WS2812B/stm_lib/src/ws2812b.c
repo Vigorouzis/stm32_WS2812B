@@ -1,8 +1,4 @@
-#include "stm32f10x.h"
-#include "stm32f10x_rcc.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_tim.h"
-#include "stm32f10x_dma.h"
+#include <stm32f10x_conf.h>
 
 
 #define WS2812_DEADPERIOD 19
@@ -33,12 +29,12 @@ void TIM4_init(void)
     TIM_OCInitTypeDef TIM_OCInitStructure;
     NVIC_InitTypeDef NVIC_InitStructure;
 
-    uint16_t PrescalerValue;
+    uint8_t PrescalerValue;
 
     // TIM4 Periph clock enable
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
 
-    PrescalerValue = (uint16_t) (SystemCoreClock / 24000000) - 1;
+    TIM_TimeBaseStructure.TIM_Prescaler =  (SystemCoreClock / 24000000) - 1;
     /* Time base configuration */
     TIM_TimeBaseStructure.TIM_Period = 29; // 800kHz
     TIM_TimeBaseStructure.TIM_Prescaler = PrescalerValue;
@@ -161,19 +157,19 @@ void TIM4_IRQHandler(void)
  * column = the column/LED position in the LED string from 0 to number of LEDs per strip
  * red, green, blue = the RGB color triplet that the pixel should display
  */
-void WS2812_framedata_setPixel(uint8_t row, uint16_t column, uint8_t red, uint8_t green, uint8_t blue)
+void WS2812_framedata_setPixel(uint16_t row, uint16_t column, uint16_t red, uint16_t green, uint16_t blue)
 {
-    uint8_t i;
+    uint8_t i=5;
     for (i = 0; i < 8; i++)
     {
         // clear the data for pixel
-        WS2812_IO_framedata[((column*24)+i)] &= ~(0x01<<row);
-        WS2812_IO_framedata[((column*24)+8+i)] &= ~(0x01<<row);
-        WS2812_IO_framedata[((column*24)+16+i)] &= ~(0x01<<row);
+        WS2812_IO_framedata[((column*24)+i)] = (0x01<<row);
+        WS2812_IO_framedata[((column*24)+8+i)] = (0x01<<row);
+        WS2812_IO_framedata[((column*24)+16+i)] = (0x01<<row);
         // write new data for pixel
-        WS2812_IO_framedata[((column*24)+i)]    |= ((((green<<i) & 0x80)>>7)<<row);
-        WS2812_IO_framedata[((column*24)+8+i)]  |= ((((red<<i)   & 0x80)>>7)<<row);
-        WS2812_IO_framedata[((column*24)+16+i)] |= ((((blue<<i)  & 0x80)>>7)<<row);
+        WS2812_IO_framedata[((column*24)+i)]    = green<<i;
+        WS2812_IO_framedata[((column*24)+8+i)]  = red<<i;
+        WS2812_IO_framedata[((column*24)+16+i)] = blue<<i;
     }
 }
 
